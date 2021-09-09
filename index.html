@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>지출관리설정</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./app.js"></script>
+  <title>뱅킹</title>
 </head>
 <body>
-    <main>
-        <div class="btn_close">닫기</div>
-        <section class="management">
-            <div>
-                <h1 class="management_title">지출관리</h1>
-            </div>
-            <article class="limit_setting">
-                <div class="limit_info">
-                    <h3>기준금액설정</h3>
-                    <h2>2,100,000원</h2>
-                </div>
-                <div class="limit_graphic"></div>
-            </article>
-            <article class="daily_report">
-                <h3>일간 리포트</h3>
-                <div class="management_chart1"></div>
-            </article>
-            <article class="dmonth_pattern">
-                <h3>지출 패턴</h3>
-                <div class="management_chart2"></div>
-            </article>
-        </section>
-    </main>
+  <!--지출관리 부분-->
+  <section class="management">
+    <button class="btn_close">닫기</button>
+    <div class="management_title">
+      <h1>지출관리</h1>
+    </div>
+    <div class="limit">
+      <div class="limit_info">
+        <h2>기준금액설정 <strong>2,100,000원</strong></h2>
+      </div>
+      <div class="limit_graphic">
+        <!--js로 처리되는 그래픽 요소?-->
+      </div>
+    </div>
+    <div class="daily_report">
+      <h2>일간 리포트</h2>
+      <canvas class="management_chart1"></canvas>
+    </div>
+    <div class="month_pattern">
+      <h2>지출 패턴</h2>
+      <canvas class="management_chart2"></canvas>
+    </div>
+  </section>
 </body>
 </html>
