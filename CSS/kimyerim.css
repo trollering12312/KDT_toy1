@@ -1,0 +1,412 @@
+/* custom reset css */
+* {
+  box-sizing: content-box;
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+ol,
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  position: relative;
+}
+
+/* color pallet */
+:root {
+  /* structure */
+  --home-bgc: #eeece5;
+  --bar-bgc: #c4c4c4;
+  --saving-bgc: #dadada;
+  --account-desc-bgc: #f5f5f5;
+  --contour: #dcdcdc;
+  /*point color*/
+  --red: #ff5f00;
+  --orange: #feb700;
+  --yellow-dark: #eeba00;
+  --yellow-light: #ffdb4c;
+  --green: #005f59;
+  --blue-light: #55acee;
+  --blue: #4c89ff;
+  --navy: #0a73c4;
+  --purple: #c64cff;
+  /* font color*/
+  --black: #000000;
+  --primary: #444444;
+  --secondary: #858585;
+  --teriary: #b4b4b4;
+  --white: #ffffff;
+  /*bottom menu box*/
+  --menu-gradient: linear-gradient(163.63deg, #00bdb2 11.35%, #c4e7b8 139.96%);
+  --menu-active-icon-color: #005f59;
+  --menu-deactive-icon-color: #eeebe5;
+}
+
+/* font-style */
+:root {
+  --line-height-common: 1.48;
+
+  --letter-spacing-far: 2px;
+  --letter-spacing-close: -0.24px;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: var(--line-height-common);
+}
+
+/* padding */
+:root {
+  --misc-padding: 30px;
+  --account-summary-padding: 50px;
+}
+
+/* class for css */
+.avatar-43 {
+  display: block;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar-43 > img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.avatar-54 {
+  display: block;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+.avatar-54 > img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* home - misc */
+.home {
+  height: 100vh;
+  padding: 50px var(--misc-padding);
+  background-color: var(--home-bgc);
+}
+
+.misc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.misc > h1 {
+  font-size: 18px;
+  letter-spacing: var(--letter-spacing-close);
+  font-weight: 500;
+  color: var(--black);
+}
+
+.misc .btn_misc {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.misc .btn_misc:last-child {
+  margin-right: 0;
+}
+
+.btn_misc > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.btn_misc.search {
+  position: relative;
+  top: 2px;
+}
+
+/* home - account_summary */
+.account_summary {
+  width: auto;
+  height: auto;
+  padding: 14px 20px 6px;
+  margin: 0 calc(var(--account-summary-padding) - var(--misc-padding));
+  margin-bottom: 24px;
+  border-radius: 12px;
+  background-color: var(--white);
+  text-align: center;
+  box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
+}
+
+.account_btn_group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.btn_account_number {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-close);
+  color: var(--secondary);
+  vertical-align: top;
+  padding: 0 10px;
+}
+
+.btn_account_transfer {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-close);
+  color: var(--black);
+}
+
+.amount_used {
+  font-size: 14px;
+  letter-spacing: var(--letter-spacing-far);
+}
+
+.amount_used strong {
+  font-size: 24px;
+}
+
+.amount_scroll {
+  position: relative;
+  left: 10px;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.amount_scroll .amount_bar {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--bar-bgc);
+}
+
+.amount_bar .bar_progress {
+  width: 70%;
+  height: 100%;
+  background-color: var(--yellow-light);
+}
+
+.amount_bar .scroll_button {
+  width: 4px;
+  height: 17px;
+  border-radius: 2px;
+  background-color: var(--red);
+}
+
+.amount_scroll button {
+  padding: 12px;
+}
+
+.budget {
+  font-size: 14px;
+  color: var(--secondary);
+}
+
+.loan {
+  margin-bottom: 20px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.loan_message {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn_loan {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  padding: 6px;
+}
+
+/* home - account_description */
+.account_description {
+  display: block;
+  padding: 25px 40px 50px;
+  margin: 0 calc(-1 * var(--misc-padding));
+  border-radius: 30px 30px 0px 0px;
+  background-color: var(--account-desc-bgc);
+  box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+  overflow: hidden;
+}
+
+.saving_hidden {
+  width: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-bottom: 17px;
+}
+
+.saving_hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.saving {
+  display: inline-flex;
+}
+
+.saving_bar {
+  width: 162px;
+  height: 47px;
+  margin-right: 13px;
+  border-radius: 6px;
+  background-color: var(--saving-bgc);
+  overflow: hidden;
+}
+
+.saving_bar .bar_progress {
+  width: 70%;
+  height: 100%;
+  font-size: 12px;
+  color: var(--white);
+  padding: 5px 0 5px 13px;
+}
+
+.saving_savings {
+  font-weight: 500;
+}
+
+.add_saving {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 47px;
+  color: var(--red);
+  white-space: nowrap;
+}
+
+.add_saving img {
+  margin-right: 3px;
+}
+
+/* account-book-list */
+.account_book_item {
+  margin-bottom: 40px;
+}
+
+.account_book_summary {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.account_book_summary span {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.account_book_summary strong {
+  display: inline;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--teriary);
+}
+
+.description_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--contour);
+  font-weight: 350;
+}
+
+.description_item strong {
+  font-weight: 300;
+}
+
+.description_item .income {
+  color: var(--red);
+}
+
+/*bar_progress color chart*/
+.bar_progress.red {
+  background-color: var(--red);
+}
+
+.bar_progress.orange {
+  background-color: var(--orange);
+}
+
+.bar_progress.yellow-dark {
+  background-color: var(--yellow-dark);
+}
+
+.bar_progress.green {
+  background-color: var(--green);
+}
+
+.bar_progress.blue-light {
+  background-color: var(--blue-light);
+}
+
+.bar_progress.navy {
+  background-color: var(--navy);
+}
+
+.bar_progress.purple {
+  background-color: var(--purple);
+}
+
+/* 지출관리 부분 */
+.management {
+  display: none;
+}
+
+/* global_footer_menu */
+.global_footer_menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.menu_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 76px;
+  padding: 0 20px;
+  background: var(--menu-gradient);
+}
+
+.btn_menu {
+  padding: 20px;
+}
+
+.menu_item:last-child img {
+  position: relative;
+  bottom: 4px;
+}
