@@ -1,0 +1,447 @@
+/* COMMON */
+body {
+	color: #000000;
+	font-size: 16px;
+}
+button {
+	border: none;
+	background-color: transparent;
+}
+
+/* 홈 화면 */
+.home {
+position: relative;
+width: 100%;
+min-width: 375px;
+min-height: 812px;
+background-color: #eeece5;
+}
+/* 홈 상단 */
+.misc {
+position: absolute;
+width: 90%;
+min-width: 327px;
+min-height: 43px;
+top: 0px;
+right: 0;
+left: 0;
+margin: auto;
+}
+.misc_profile img {
+position: absolute;
+width: 43px;
+height: 43px;
+left: 0px;
+top: 0px;
+border: 1px solid #dccdb6;
+box-sizing: border-box;
+}
+.misc h1 {
+position: absolute;
+width: 49px;
+height: 27px;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin: auto;
+font-weight: 800;
+line-height: 27px;
+}
+.misc_btn_group {
+position: absolute;
+width: 66px;
+height: 24px;
+right: 0;
+top: 0;
+bottom: 0;
+margin: auto;
+}
+/* .qr_misc_deco {
+position: absolute;
+width: 17px;
+height: 0;
+left: ;
+top: 0;
+bottom: 0;
+margin: auto;
+border: 1px solid #FF5F00;
+} */
+.btn_misc {
+cursor: pointer;
+}
+/* .btn_misc:first-child {
+position: absolute;
+width: 24px;
+height: 21px;
+border: 1px solid #FF5F00;
+padding: 0;
+} */
+.btn_misc:first-child img {
+position: absolute;
+width: 24px;
+height: 21px;
+left: 0;
+top: 0;
+bottom: 0;
+margin: auto;
+}
+
+.btn_misc:last-child img {
+position: absolute;
+width: 24px;
+height: 24px;
+right: 0;
+top: 0;
+bottom: 0;
+margin: auto;
+}
+
+/* 아래코드 확인할것 필요없는것인지 */
+.account { 
+position: absolute;
+width: 100%;
+height: 680px;
+top: 76px;
+right: 0;
+left: 0;
+margin: auto;
+}
+.account_summary {
+position: absolute;
+width: 66%;
+min-width: 279px;
+min-height: 155px;
+top: 0;
+right: 0;
+left: 0;
+margin: auto;
+background: #FFFFFF;
+box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
+border-radius: 12px;
+}
+.account_btn_group {
+display: flex;
+position: absolute;
+height: 21px;
+top: 14px;
+right: 0;
+left: 0;
+margin: auto;
+justify-content: center;
+align-items: center;
+font-weight: 500;
+}
+.btn_account_number {
+position: absolute;
+width: 135px;
+left: 0;
+right: 0;
+margin: auto;
+cursor: pointer;
+color: #858585;
+font-size: 0.8rem;
+font-weight: 600;
+}
+.btn_account_transfer {
+position: absolute;
+right: 10px;
+cursor: pointer;
+font-size: 0.8rem;
+font-weight: 600;
+}
+.amount_used {
+position: absolute;
+width: 160px;
+height: 36px;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+font-size: 1rem;
+letter-spacing: 2px;
+text-align: center;
+/* line-height: 36px; */
+}
+.amount_used strong {
+font-weight: 800;
+font-size: 1.3rem;
+line-height: 36px;
+vertical-align: middle;
+}
+/* 막대그래프 */
+.budget {
+position: absolute;
+width: 158px;
+height: 21px;
+bottom: 6px;
+right: 0;
+left: 0;
+margin: auto;
+color: #858585;
+font-size: 0.8rem;
+font-weight: 600;
+text-align: center;
+}
+
+.loan {
+display: flex;
+position: absolute;
+width: 75%;
+top: 179px;
+right: 0;
+left: 0;
+margin: auto;
+justify-content: center;
+align-items: center;
+font-size: 0.8rem;
+font-weight: 700;
+}
+.btn_loan {
+text-decoration: underline;
+cursor: pointer;
+}
+
+.account_description {
+position: absolute;
+width: 100%;
+height: 383px;
+top: 221px;
+right: 0;
+left: 0;
+margin: auto;
+background-color: #F5F5F5;
+box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+border-radius: 30px 30px 0px 0px;
+}
+.saving_visible {
+position: absolute;
+width: 106px;
+height: 14px;
+top: 0;
+right: 0;
+left: 0;
+margin: auto;
+cursor: pointer;
+}
+.btn_saving_visible {
+position: absolute;
+width: 48px;
+height: 3.57px;
+top: 37.2%;
+left: 27.3%;
+border-radius: 4px;
+background-color:#C4C4C4 ;
+}
+.saving {
+display: flex;
+position: absolute;
+width: 80%;
+height: 49px;
+top: 23px;
+right: 0;
+left: 0;
+margin: auto;
+overflow-x: auto;
+}
+.saving_bar {
+position: absolute;
+width: 162px;
+height: 47px;
+top: 0;
+left: 0;
+background-color: #DADADA;
+border-radius: 6px;
+}
+.saving_bar:last-child {
+left: 205px;
+}
+.bar_grogress {
+color: #FFFFFF;
+font-size: 0.7rem;
+}
+.saving_bar .orange {
+height: 47px;
+width: 60%;
+background-color: #FF5F00;
+border-radius: 6px 0px 0px 6px;
+}
+.saving_bar .yellow {
+height: 47px;
+width: 75%;
+background-color: #FEB700;
+border-radius: 6px 0px 0px 6px;
+}
+.saving_goal {
+position: absolute;
+height: 18px;
+width: 60px;
+left: 13px;
+top: 5px;
+line-height: 18px;
+font-weight: 500;
+}
+.saving_savings {
+position: absolute;
+height: 18px;
+width: 79px;
+left: 13px;
+top: 22px;
+line-height: 18px;
+}
+
+/* 사용내역들 - js로? 다룰것? */
+.account_description ol {
+position: absolute;
+left: 0;
+top: 89px;
+width: 100%;
+height: 637px;
+max-height: 548px;
+overflow-y: auto;
+background-color: #F5F5F5;
+}
+
+
+/* 지출관리 화면 */
+.management {
+position: relative;
+width: 100%;
+min-width: 375px;
+min-height: 812px;
+background-color: #FFF;
+}
+.btn_close {
+position: absolute;
+width: 38px;
+height: 21px;
+right: 13px;
+font-size: 0.8rem;
+font-weight: 300;
+cursor: pointer;
+}
+.management_title {
+position: absolute;
+width: 93px;
+height: 36px;
+top: 33px;
+left: 30px;
+}
+.management_title h1 {
+height: 100%;
+font-size: 1.3rem;
+font-weight: 600;
+line-height: 36px;
+}
+/* 기준금액설정 */
+.limit {
+position: absolute;
+width: 308px;
+height: 36px;
+top: 102px;
+left: 29px;
+}
+.limit_info {
+height: 100%;
+}
+.limit_info h2 {
+font-size: 1rem;
+font-weight: 500;
+line-height: 27px;
+}
+.limit_info strong {
+font-size: 1.3rem;
+font-weight: 600;
+line-height: 36px;
+margin-left: 78px;
+color: #FF5F00;
+}
+/* js로 처리되는 그래픽 요소 */
+.limit_graphic {
+position: absolute;
+top: 59px;
+width: 308px;
+height: 28px;
+background-color: blueviolet;
+}
+/* 일간 리포트 */
+.daily_report {
+position: absolute;
+width: 347px;
+height: 242px;
+top: 244px;
+left: 29px;
+overflow-x: scroll;
+}
+.daily_report h2 {
+width: 86px;
+height: 27px;
+font-size: 1rem;
+font-weight: 500;
+line-height: 27px;
+}
+.daily_report .management_chart1{
+width: 462px;
+height: 198px;
+margin-top: 17px;
+background-color: burlywood;
+}
+/* 지출 패턴 */
+.month_pattern {
+position: absolute;
+height: 27px;
+top: 532px;
+left: 29px;
+}
+.month_pattern h2 {
+font-size: 1rem;
+font-weight: 500;
+line-height: 27px;
+}
+.month_pattern .management_chart2 {
+position: absolute;
+width: 308px;
+height: 308px;
+top: 45px;
+background-color: darkcyan;
+overflow-y: scroll;
+}
+
+/* FOOTER */
+.global-footer-menu {
+position: absolute;
+width: 100%;
+min-width: 375px;
+height: 76px;
+top: 736px;
+left: 0;
+}
+.global-footer-menu .menu-list {
+width: 100%;
+height: 100%;
+display: flex;
+background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+justify-content: space-around;
+align-items: center;
+}
+.global-footer-menu .btn_menu {
+cursor: pointer;
+}
+
+.menu-item:nth-child(1) .btn_menu img {
+width: 28px;
+height: 28px;
+}
+.menu-item:nth-child(2) .btn_menu img {
+width: 30px;
+height: 23.44px;
+}
+.menu-item:nth-child(3) .btn_menu img {
+width: 24px;
+height: 21.96px;
+}
+.menu-item:nth-child(4) .btn_menu img {
+width: 26.27px;
+height: 6px;
+}
