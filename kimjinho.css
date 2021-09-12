@@ -1,1 +1,187 @@
+.home {
+   max-width: 375px;
+   background-color: #EEECE5;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 56px;
+   margin: 0 auto;
+}
 
+/* header */
+header.misc {
+   width: 327px;
+   height: 43px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0 21px 34px 27px;
+}
+
+header.misc h1 {
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.misc>.misc_profile img {
+   width: 43px;
+   height: 43px;
+}
+
+.misc .misc_btn_group {
+   display: flex;
+}
+
+.misc .misc_btn_group .btn_misc {
+   padding: 0;
+}
+
+.misc .misc_btn_group .btn_misc+.btn_misc {
+   padding-left: 18px;
+}
+
+/* main */
+/* account_summary */
+.account .account_summary {
+   margin: 0 48px;
+   padding: 14px 0 6px 0;
+   width: 279px;
+   background-color: #FFFFFF;
+   border-radius: 12px;
+   box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* account_btn_group */
+.account .account_summary .account_btn_group {
+   width: 100%;
+   margin-bottom: 16px;
+   position: relative;
+}
+
+.account .account_summary .account_btn_group .btn_account_number {
+   width: 100%;
+   align-items: center;
+   padding: 0;
+   font-size: 14px;
+   line-height: 21px;
+   letter-spacing: -0.24px;
+   color: #858585;
+}
+
+.account .account_summary .account_btn_group .btn_account_transfer {
+   position: absolute;
+   right: 17px;
+   padding: 0;
+   font-size: 14px;
+   font-weight: 500;
+}
+
+/* amount_used  */
+.account .account_summary .amount_used {
+   font-size: 24px;
+   font-weight: 500;
+   line-height: 36px;
+   letter-spacing: 2px;
+   margin-bottom: 23px;
+}
+
+/* Expenditure graph */
+.account .progress_wraper {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 12px;
+}
+
+.account .progress_bar {
+   max-width: 202px;
+   width: 100%;
+   height: 6px;
+   border-radius: 3px;
+   background-color: #C4C4C4;
+   position: relative;
+   margin-right: 12px;
+}
+
+.account .progress_bar::before {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 70%;
+   border-top-left-radius: 3px;
+   border-bottom-left-radius: 3px;
+   background-color: #FFDB4C;
+}
+
+.account .progress_bar .red_bar {
+   width: 4px;
+   height: 17px;
+   background-color: #FF5F00;
+   position: absolute;
+   left: 75%;
+   top: -160%;
+   border: 2px solid #ffffff;
+   border-radius: 4px;
+}
+
+.account .progress_wraper .graph {
+   width: 14px;
+   height: 14px;
+   /* border: 1px solid yellow; */
+}
+
+/* budget */
+.account .account_summary .budget {
+   font-size: 14px;
+   line-height: 21px;
+   color: #858585;
+}
+
+/* loan */
+.home .loan {
+   display: flex;
+   align-items: flex-end;
+   width: 100%;
+   margin: 24px 70px 21px 43px;
+
+}
+
+.home .loan>strong {
+   font-size: 14px;
+   font-weight: 500;
+   line-height: 21px;
+}
+
+.home .loan>button {
+   margin-left: 6px;
+   border-bottom: 1px solid black;
+   padding: 0;
+   border-radius: 0px;
+}
+
+/* Account Description */
+.account_description {
+   background-color: var(--light-gray);
+   border-top-left-radius: 30px;
+   border-top-right-radius: 30px;
+}
+
+/* Footer */
+.global-footer-menu {
+   height: 76px;
+   background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+   max-width: 375px;
+   margin: 0 auto;
+   display: flex;
+}
+
+.global-footer-menu ul {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 100%;
+}
