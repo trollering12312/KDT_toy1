@@ -1,146 +1,183 @@
 <!DOCTYPE html>
 <html lang="ko">
-  
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <script defer src="./app.js"></script>
-    <title>뱅킹</title>
-  </head>
 
-  <body>
-    <!--메인화면 부분-->
-    <section class="home">
-      <header class="misc">
-        <div class="misc_profile">
-          <img src="./assets/images/avatar0.png" alt="사용자 이미지" />
-        </div>
-        <h1>생활비</h1>
-        <div class="misc_btn_group">
-          <button class="btn_misc">
-            <img src="./assets/icons/qr.svg" alt="QR코드" />
-          </button>
-          <button class="btn_misc">
-            <img src="./assets/icons/search.svg" alt="검색" />
-          </button>
-        </div>
-      </header>
-      <main class="account">
-        <section class="account_summary">
-          <div class="account_btn_group">
-            <button class="btn_account_number" type="button">
-              355-673877-78773
-            </button>
-            <button class="btn_account_transfer" type="button">이체</button>
-          </div>
-          <h2 class="amount_used"><strong>1,240,000</strong>원</h2>
-          <!-- <div>막대그래프</div> -->
-          <p class="budget">5일동안 <strong>210,000</strong>원 남음</p>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>뱅킹</title>
 
-        <div class="loan">
-          <strong class="loan_message">
-            지금 낮은 이자로 생활대출을 신청하세요!
-          </strong>
-          <button class="btn_loan" type="button">Go!</button>
-        </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</head>
 
-        <section class="account_description">
-          <header class="saving">
-            <div class="saving_bar">
-              <div class="bar_grogress orange">
-                <!--부모 div는 회색 영역, 자식 div는 색 영역-->
-                <p class="saving_goal">여행가자!</p>
-                <strong class="saving_savings">842,200원</strong>
-              </div>
+<body>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!--메인화면 부분-->
+      <div class="swiper-slide">
+        <section class="home">
+          <header class="misc">
+            <div class="misc_profile">
+              <img src="./assets/images/avatar0.png" alt="사용자 이미지" />
             </div>
-
-            <div class="saving_bar">
-              <div class="bar_grogress yellow">
-                <!--부모 div는 회색 영역, 자식 div는 색 영역-->
-                <p class="saving_goal">냉장고사기</p>
-                <strong class="saving_savings">142,200원</strong>
-              </div>
+            <h1>생활비</h1>
+            <div class="misc_btn_group">
+              <button class="btn_misc">
+                <img src="./assets/icons/qr.svg" alt="QR코드" />
+              </button>
+              <button class="btn_misc">
+                <img src="./assets/icons/search.svg" alt="검색" />
+              </button>
             </div>
           </header>
-
-          <ol>
-            <!-- 밑은 for문에 추가해야할 데이터
-            <li>
-              <div>
-                <span>오늘(날짜)</span>
-                <strong>127,600원 지출(지출액)</strong>
+          <main class="account">
+            <section class="account_summary">
+              <div class="account_btn_group">
+                <button class="btn_account_transfer" type="button">이체</button>
+                <button class="btn_account_number" type="button">
+                  <p>355-673877-78773</p>
+                </button>
               </div>
-
-              <ul>
-                <li>
-                  <span>미스터피자(지출항목)</span>
-                  <strong>32,000(지출금액)</strong>
-                </li>
-                <li>
-                  <span>미스터피자(지출항목)</span>
-                  <strong>32,000(지출금액)</strong>
-                </li>
-                <li>
-                  <span>미스터피자(지출항목)</span>
-                  <strong>32,000(지출금액)</strong>
-                </li>
-              </ul>
-            </li> -->
-          </ol>
+              <div class="amount_used">
+                <h2><strong>1,240,000</strong>원</h2>
+              </div>
+              <div class="limit">
+                <div class="limit_graphic">
+                  <div class="limit_bar"></div>
+                  <div class="limit_bar_use"></div>
+                  <div class="limit_bar_indicator"></div>
+                </div>
+                <button class="graph">
+                  <img src="./assets/icons/graph.svg" alt="graph">
+                </button>
+              </div>
+              <p class="budget">5일 동안&nbsp<strong>210,000</strong>원 남음</p>
+            </section>
+            <div class="loan">
+              <strong class="loan_message">
+                지금 낮은 이자로 생활대출을 신청하세요!
+              </strong>&nbsp
+              <a class="btn_loan" href="#">Go</a>
+            </div>
+            <section class="account_description">
+              <button class="more">
+                <img src="./assets/icons/up.svg">
+              </button>
+              <header class="saving">
+                <div class="saving_bar">
+                  <div class="bar_grogress orange">
+                    <!--부모 div는 회색 영역, 자식 div는 색 영역-->
+                  </div>
+                  <div class="saving_info">
+                    <p class="saving_goal">여행가자</p>
+                    <strong class="saving_savings">842,200원</strong>
+                  </div>
+                </div>
+                <div class="saving_bar">
+                  <div class="bar_grogress yellow">
+                    <!--부모 div는 회색 영역, 자식 div는 색 영역-->
+                  </div>
+                  <div class="saving_info">
+                    <p class="saving_goal">냉장고사기</p>
+                    <strong class="saving_savings">142,200원</strong>
+                  </div>
+                </div>
+                <div class="saving_bar">
+                  <div class="bar_grogress yellow">
+                    <!--부모 div는 회색 영역, 자식 div는 색 영역-->
+                  </div>
+                  <div class="saving_info">
+                    <p class="saving_goal">냉장고사기</p>
+                    <strong class="saving_savings">142,200원</strong>
+                  </div>
+                </div>
+                <div class="saving_bar">
+                  <div class="bar_grogress yellow">
+                    <!--부모 div는 회색 영역, 자식 div는 색 영역-->
+                  </div>
+                  <div class="saving_info">
+                    <p class="saving_goal">냉장고사기</p>
+                    <strong class="saving_savings">142,200원</strong>
+                  </div>
+                </div>
+                <button class="saving_bar saving_add">
+                  <img src="./assets/icons/addCircle.svg">
+                  저금통 만들기
+                </button>
+              </header>
+              <div class="expense">    
+              </div>
+            </section>
+          </main>
         </section>
-      </main>
-    </section>
-    
-    <!--지출관리 부분-->
-    <section class="management">
-      <button class="btn_close">닫기</button>
-      <div class="management_title">
-        <h1>지출관리</h1>
       </div>
-      <div class="limit">
-        <div class="limit_info">
-          <h2>기준금액설정 <strong>2,100,000원</strong></h2>
-        </div>
-        <div class="limit_graphic">
-          <!--js로 처리되는 그래픽 요소?-->
-        </div>
-      </div>
-      <div class="daily_report">
-        <h2>일간 리포트</h2>
-        <canvas class="management_chart1"></canvas>
-      </div>
-      <div class="month_pattern">
-        <h2>지출 패턴</h2>
-        <canvas class="management_chart2"></canvas>
-      </div>
-    </section>
 
-    <footer class="global-footer-menu">
-      <ul class="menu-list">
-        <li class="menu-item">
-          <button class="btn_menu" type="button">
-            <img src="./assets/icons/house.svg" alt="홈 화면으로 가기 버튼" />
-          </button>
-        </li>
-        <li class="menu-item">
-          <button class="btn_menu" type="button">
-            <img src="./assets/icons/arrows.svg" alt="이동" />
-          </button>
-        </li>
-        <li class="menu-item">
-          <button class="btn_menu" type="button">
-            <img src="./assets/icons/skypeMessage.svg" alt="채팅하기" />
-          </button>
-        </li>
-        <li class="menu-item">
-          <button class="btn_menu" type="button">
-            <img src="./assets/icons/more.svg" alt="눌러서 메뉴 열기" />
-          </button>
-        </li>
-      </ul>
-    </footer>
-  </body>
+      <!--지출관리 부분-->
+      <div class="swiper-slide">
+        <section class="management">
+          <button class="btn_close">닫기</button>
+          <div class="management_title">
+            <h1>지출관리</h1>
+          </div>
+          <div class="limit">
+            <div class="limit_info">
+              <h2>기준금액설정 <strong>2,100,000원</strong></h2>
+            </div>
+            <div class="limit_graphic">
+              <div class="limit_bar"></div>
+              <div class="limit_bar_use"></div>
+              <div class="limit_bar_indicator"></div>
+            </div>
+          </div>
+          <div class="daily_report">
+            <h2>일간 리포트</h2>
+            <canvas class="management_chart1"></canvas>
+          </div>
+          <div class="month_pattern">
+            <h2>6월 지출 패턴</h2>
+            <canvas class="management_chart2"></canvas>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <footer class="global-footer-menu">
+    <ul class="menu-list">
+      <li class="menu-item">
+        <button class="btn_menu" type="button">
+          <img src="./assets/icons/house.svg" alt="홈 화면으로 가기 버튼" />
+        </button>
+      </li>
+      <li class="menu-item">
+        <button class="btn_menu" type="button">
+          <img src="./assets/icons/arrows.svg" alt="이동" />
+        </button>
+      </li>
+      <li class="menu-item">
+        <button class="btn_menu" type="button">
+          <img src="./assets/icons/skypeMessage.svg" alt="채팅하기" />
+        </button>
+      </li>
+      <li class="menu-item">
+        <button class="btn_menu" type="button">
+          <img src="./assets/icons/more.svg" alt="눌러서 메뉴 열기" />
+        </button>
+      </li>
+    </ul>
+  </footer>
+  <script src="./js/app.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      noSwipingSelector: ".saving > *"
+    });
+  </script>
+</body>
+
 </html>
