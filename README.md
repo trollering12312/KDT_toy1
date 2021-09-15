@@ -242,6 +242,14 @@ _`forEach`사용했지만 `for-of`로도 구현 가능_
     * https://webclub.tistory.com/455
 
 
+* chart의 크기 조절하는 법
+https://stackoverflow.com/questions/37621020/setting-width-and-height
+
+정확하진 않은데... 
+표에 `responsive:true, maintainAspectRatio: false` 옵션을 설정하고, 다른 요소로 canvas를 감싸서 그 요소에 너비,높이 값을 줌
+
+
+
 _`swiper` 라이브러리의 **loop기능**을 활성화하면 `chart`라이브러리와 충돌한다_
 
 <br>
