@@ -362,7 +362,7 @@ body img{
     position: relative;
 
     margin: 0 15px 0;
-    width: 200px;
+    width: 250px;
     height: 8vh;
 
     flex: 0 0 auto;/*grow,shrink,basis*/
