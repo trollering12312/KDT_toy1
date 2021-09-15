@@ -193,7 +193,12 @@ function expenseGenerate() {
 
 //daily_chart-bar
 function monthly_expense_chart_maker(monthly_expense_dict) {
-	const daily_chart = $('.daily');
+	const daily_chart = $('.daily canvas');
+
+	daily_chart.width(200);
+	
+	console.log(daily_chart.width());
+
 
 	const labels = Object.keys(monthly_expense_dict);
 	const data_ = Object.values(monthly_expense_dict);
@@ -201,33 +206,37 @@ function monthly_expense_chart_maker(monthly_expense_dict) {
 	const data = {
 		labels: Object.keys(monthly_expense_dict),
 		datasets: [{
-			type: 'bar',
-			label: '일별 지출',
-			data: Object.values(monthly_expense_dict),
-			backgroundColor: "#bfff00",
-			barPercentage:0.5
-		},{
 			type: 'line',
 			label: '일별 지출',
 			data: Object.values(monthly_expense_dict),
 			borderColor: "#fff457",
 			fill: false,
-			borderDash : [3]
-		}
-	],
+			borderDash: [3]
+		}, {
+			type: 'bar',
+			label: '일별 지출',
+			data: Object.values(monthly_expense_dict),
+			backgroundColor: "#bfff00",
+			barPercentage: 0.5
+		}],
 	};
 
 	const config = {
 		type: 'scatter',
 		data: data,
 		options: {
-		  scales: {
-			y: {
-			  beginAtZero: true
-			}
-		  }
-		}
-	  };
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			},
+			options:{
+				aspectRatio:4
+		   }
+		},
+		maintainAspectRatio: false,
+		responsive:true,
+	};
 
 	// const daily_Chart = new Chart(daily_chart, config);
 	var mixedChart = new Chart(daily_chart, config);
@@ -238,7 +247,7 @@ function monthly_expense_chart_maker(monthly_expense_dict) {
 //month_chart-doughnut
 
 function monthly_category_maker(monthly_category_dict, color_list) {
-	const month_chart = $('.month');
+	const month_chart = $('.month canvas');
 
 	const labels = Object.keys(monthly_category_dict);
 	const data = Object.values(monthly_category_dict);
@@ -246,17 +255,22 @@ function monthly_category_maker(monthly_category_dict, color_list) {
 	const month_data = {
 		labels: labels,
 		datasets: [{
-			label: 'My First Dataset',
+			label: '월 카테고리 사용 금액',
 			data: data,
 			backgroundColor: color_list,
-			hoverOffset: 4,
-			radius : 200
 		}]
 	};
 
 	const month_config = {
 		type: 'doughnut',
 		data: month_data,
+		responsive: true,
+		maintainAspectRatio: false,
+		cutout:'50%',
+		options:{
+			aspectRatio:1
+	  	}
+		
 	};
 
 	const month_Chart = new Chart(month_chart, month_config);
@@ -273,7 +287,7 @@ function setCategoryTotal(monthly_category_dict, color_list) {
 	})
 
 	$(".management .ico").each(function (i, item) {
-		$(item).css('color',color_list[i]);
+		$(item).css('color', color_list[i]);
 	})
 
 }

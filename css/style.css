@@ -501,9 +501,9 @@ body img{
 .management{
     /*vw, vh 사용*/
     width: 100vw;
-    height: 85vh;
-    margin:  0 auto;
-    padding-top: 5vh;
+    height: 80vh;
+    padding: 5vh 0;
+
 
     position: relative;
 
@@ -516,21 +516,24 @@ body img{
     background-color: white;
 }
 
-.btn_close {
-
-    width: 70px;
-    height: 30px;
-
-    position: absolute;
-    top:10px;
-    right: 10px;
-
-    font-weight: 300;
-    font-size: 14px;
+.management > *{
+    padding: 3vh 10vw;
 }
 
-.management > *{
-    padding: 10px 20px;
+.btn_close {
+
+    width: 100px;
+    height: 50px;
+
+    padding: 0;
+
+    position: absolute;
+    top:2vh;
+    right: 1vw;
+
+    font-size: 24px;
+
+    display: inline-block;
 }
 
 .management h2{
@@ -569,7 +572,25 @@ body img{
     margin-left: 40%;
 }
 
+/*chart*/
+.management .chart {
+    margin: 0 auto;
+}
 
+.management .daily {
+
+    width: 80vw;
+    height: 50vw;
+
+    overflow-x: auto;
+}
+
+.management .month {
+    width: 50vw;
+    height: 50vw;
+}
+
+/*카테고리*/
 .management > .category_list{
     display: flex;
     flex-direction: column;

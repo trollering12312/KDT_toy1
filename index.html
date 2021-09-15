@@ -146,11 +146,15 @@
           </div>
           <div class="daily_report">
             <h2>일간 리포트</h2>
-            <canvas class="daily chart"></canvas>
+            <div class="chart daily">
+              <canvas></canvas>
+            </div>
           </div>
           <div class="month_pattern">
             <h2>6월 지출 패턴</h2>
-            <canvas class="month chart"></canvas>
+            <div class="chart month">
+              <canvas></canvas>
+            </div>
           </div>
           <ul class="category_list">
             <li class="category_item">
@@ -211,7 +215,7 @@
 
   <script>
     window.onload = new Swiper(".mySwiper", {
-      noSwipingSelector: ".saving > *",
+      noSwipingSelector: ".saving > *,.chart",
     });
   </script>
 
