@@ -9,9 +9,18 @@
   <link rel="stylesheet" href="./css/style.css" />
   <title>뱅킹</title>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.5/swiper-bundle.min.js"></script>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/js/all.min.js"></script>
+    <!--chart-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+    <!--swiper-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -110,7 +119,7 @@
                   저금통 만들기
                 </button>
               </header>
-              <div class="expense">    
+              <div class="expense">
               </div>
             </section>
           </main>
@@ -126,7 +135,8 @@
           </div>
           <div class="limit">
             <div class="limit_info">
-              <h2>기준금액설정 <strong>2,100,000원</strong></h2>
+              <h2>기준금액설정</h2>
+              <strong>2,100,000원</strong>
             </div>
             <div class="limit_graphic">
               <div class="limit_bar"></div>
@@ -136,12 +146,39 @@
           </div>
           <div class="daily_report">
             <h2>일간 리포트</h2>
-            <canvas class="management_chart1"></canvas>
+            <canvas class="daily chart"></canvas>
           </div>
           <div class="month_pattern">
             <h2>6월 지출 패턴</h2>
-            <canvas class="management_chart2"></canvas>
+            <canvas class="month chart"></canvas>
           </div>
+          <ul class="category_list">
+            <li class="category_item">
+              <i class="fas fa-car fa-fw ico"></i>
+              <h2>주유비</h2>
+              <h2 class="category_price">1</h2>
+            </li>
+            <li class="category_item">
+              <i class="fas fa-dumbbell fa-fw ico"></i>
+              <h2>건강 관리비</h2>
+              <h2 class="category_price">2</h2>
+            </li>
+            <li class="category_item">
+              <i class="fas fa-utensils fa-fw ico"></i>
+              <h2>외식비</h2>
+              <h2 class="category_price">3</h2>
+            </li>
+            <li class="category_item">
+              <i class="fas fa-shopping-basket fa-fw ico"></i>
+              <h2>장보기</h2>
+              <h2 class="category_price">4</h2>
+            </li>
+            <li class="category_item">
+              <i class="fas fa-store fa-fw ico"></i>
+              <h2>상점</h2>
+              <h2 class="category_price">5</h2>
+            </li>
+          </ul>
         </section>
       </div>
     </div>
@@ -171,13 +208,14 @@
       </li>
     </ul>
   </footer>
-  <script src="./js/app.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      noSwipingSelector: ".saving > *"
+    window.onload = new Swiper(".mySwiper", {
+      noSwipingSelector: ".saving > *",
     });
   </script>
+
+  <script src="./js/app.js"></script>
 </body>
 
 </html>

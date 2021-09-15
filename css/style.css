@@ -338,15 +338,16 @@ body img{
 
     width: 95%;
     margin: 0 auto;
-    height: 10vh;
+    height: 8vh;
 
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    overflow-y: hidden;
     justify-content: flex-start;
 
     background-color: white;
+
+    flex-shrink: 0;
 }
 
 
@@ -412,13 +413,14 @@ body img{
 
 .account_description > .expense{
 
-    height: 95%;
+    height: 100%;
     width: 95%;
 
     overflow-y:auto;
     overflow-x: hidden;
 
     padding: 1vh 3vw;
+    margin-bottom: 30vh;
 
     display: flex;
 	flex-direction: column;
@@ -475,7 +477,7 @@ body img{
     }
 
     .account_description > .saving{
-        height: 7vh;
+        height: 6vh;
     }
 
     .account_description > .saving > .saving_bar{
@@ -483,6 +485,10 @@ body img{
         height: 6vh;
         margin: 0 10px 0;
         font-size: 12px;
+    }
+
+    .account_description > .expense{
+        margin-bottom: 20vh;
     }
 
     .account_description > .expense *{
@@ -494,9 +500,10 @@ body img{
 /* 지출관리*/
 .management{
     /*vw, vh 사용*/
-    width: 95vw;
-    height: 90vh;
+    width: 100vw;
+    height: 85vh;
     margin:  0 auto;
+    padding-top: 5vh;
 
     position: relative;
 
@@ -504,16 +511,15 @@ body img{
     flex-direction: column;
 
     overflow-y: scroll;
+    overflow-x: hidden;
 
-    border: 1px red solid;
-
+    background-color: white;
 }
-
 
 .btn_close {
 
     width: 70px;
-    height: 35px;
+    height: 30px;
 
     position: absolute;
     top:10px;
@@ -524,14 +530,7 @@ body img{
 }
 
 .management > *{
-    border: 1px yellow solid;
     padding: 10px 20px;
-
-    flex-shrink: 0;/*각 요소가 박스내에서 크기가 유지되게해 스크롤을 생성*/
-}
-
-.management *{
-    font-weight: 500;
 }
 
 .management h2{
@@ -539,19 +538,25 @@ body img{
     color : #444444;
 }
 
-.management h2 > strong{
-    
+.management > .management_title{
     font-size: 24px;
-    color : #FF5F00;
-    letter-spacing: -0.24px;
-
-    float: right;
 }
 
-.management > .management_title{
-    margin-top: 60px;
+.management > .limit > *{
+    width: 100%;
+}
+
+.management > .limit > .limit_info{
+    position: relative;
+}
+
+.management > .limit > .limit_info > strong{
+    position: absolute;
+    right: 1vw;
 
     font-size: 24px;
+    letter-spacing: -0.24px;
+    color:var(--red);
 }
 
 .management > .limit > .limit_graphic > .limit_bar_use{
@@ -562,6 +567,24 @@ body img{
 .management > .limit > .limit_graphic > .limit_bar_indicator{
     /*위치 조절에 사용할 값*/
     margin-left: 40%;
+}
+
+
+.management > .category_list{
+    display: flex;
+    flex-direction: column;
+}
+
+.management > .category_list > .category_item > *{
+    display: inline;
+    font-size: 20px;
+
+    margin: 1vh 1vw;
+    text-align: center;
+}
+
+.management > .category_list > .category_item > .category_price{
+    float: right;
 }
 
 /*footer*/
