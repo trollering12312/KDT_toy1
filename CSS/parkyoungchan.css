@@ -1,0 +1,596 @@
+/*공통요소*/
+/*공통:웹폰트*/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/*공통:색지정*/
+:root {
+    /* structure */
+    --home-bgc: #EEECE5;
+    --bar-bgc: #C4C4C4;
+    --saving-bgc: #DADADA;
+    --account-desc-bgc: #F5F5F5;
+    --contour: #DCDCDC;
+    /*point color*/
+    --red: #FF5F00;
+    --orange: #FEB700;
+    --yellow-dark: #EEBA00;
+    --yellow-light: #FFDB4C;
+    --green: #005F59;
+    --blue-light: #55ACEE;
+    --blue: #4C89FF;
+    --navy: #0A73C4;
+    --purple: #C64CFF;
+    /* font color*/
+    --black: #000000;
+    --primary: #444444;
+    --secondary: #858585;
+    --teriary: #B4B4B4;
+    --white: #FFFFFF;
+    /*bottom menu box*/
+    --menu-gradient: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+    --menu-active-icon-color: #005F59;
+    --menu-deactive-icon-color: #EEEBE5;
+  }
+
+/*공통:폰트,글자색지정*/
+body{
+    font-style: normal;
+    font-family: "Noto Sans KR", sans-serif;
+    color: var(--black);
+}
+
+/*공통:스크롤바 숨기기*/
+/*크롬에만 적용*/
+body * ::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+
+}
+
+/*공통:모든 이미지는 wrapper로 감싸서 꽉차게 배치*/
+body img{
+    width: 100%;
+    height: 100%;
+}
+
+/*공통:limit-기준 금액 설정*/
+.limit > *{
+    width: 70%;
+    height: 30px;
+    margin: 10px 0;
+
+    display: flex;
+    align-items:center;
+}
+
+/*겹처서 배치*/
+.limit > .limit_graphic{
+    position: relative;
+}
+.limit > .limit_graphic > *{
+    position: absolute;
+    left:0;
+
+    height: 8px;
+    border-radius: 3px;
+}
+
+.limit > .limit_graphic > .limit_bar{
+    background-color:var(--bar-bgc);
+    width: 100%;
+}
+
+.limit > .limit_graphic > .limit_bar_use{
+    background-color: var(--yellow-light);
+}
+
+.limit > .limit_graphic > .limit_bar_indicator{
+    height: 32px;
+    width: 10px;
+    background-color: var(--red);
+    border: 2px solid var(--white);
+}
+
+/*limit 반응형*/
+@media only screen and (max-width: 500px) {
+    .limit > .limit_graphic > *{
+        height: 4px;
+    }
+
+    .limit > .limit_graphic > .limit_bar_indicator{
+        height: 16px;
+        width: 5px;
+    }
+}   
+
+
+/*메인(홈화면)*/
+.home {
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    background: var(--home-bgc);
+    display: flex;
+    flex-direction: column;
+}   
+
+/*메인:misc - 상단 nav*/
+.home > .misc{
+    height: 10vh;
+    display: flex;
+
+    padding: 2vh 0;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home > .misc > .misc_profile{
+    width: 64px;
+}
+
+.home > .misc > h1{
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -0.24px;
+    margin-left: 30px;
+}
+
+.home > .misc > .misc_btn_group{
+    width: 150px;
+}
+
+.home > .misc > .misc_btn_group :first-child{
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.home > .misc > .misc_btn_group > .btn_misc{
+    width: 40px;
+}
+
+/*misc 미디어 쿼리*/
+@media only screen and (max-width: 500px) {
+
+    .home > .misc > .misc_profile{
+        width: 48px;
+    }
+
+    .home > .misc > h1{
+        font-size: 18px;
+        margin-left: 45px;
+    }
+
+    .home > .misc > .misc_btn_group{
+        width: 100px;
+    }
+    
+    .home > .misc > .misc_btn_group :first-child{
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+    
+    .home > .misc > .misc_btn_group > .btn_misc{
+        width: 20px;
+    }
+}
+
+/*account*/
+
+/*account: 계좌 요약*/
+.account > .account_summary {
+    width: 70vw;
+    height: 30vh;
+
+    margin: 0 auto;
+    padding: 1vh;
+
+    border-radius: 10px;
+    background:var(--white);
+    box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    font-size: 24px;
+}
+
+.account > .account_summary  > *{
+    width: 100%;
+    text-align: center;
+
+    margin-bottom: 1vh;
+}
+
+.account > .account_summary  p{
+    color: #858585;
+
+    width: 100%;
+}
+
+.account > .account_summary> .account_btn_group > .btn_account_transfer{
+    position: absolute;
+
+    right: 2vw
+}
+
+.account > .account_summary> .amount_used > h2 >strong{
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.account > .account_summary > .limit{
+    width: 50vw;
+    padding: 0 5vw;
+}
+
+.account > .account_summary > .limit> .limit_graphic{
+    width: 80%;
+    float: left;
+}
+
+.account > .account_summary > .limit> .graph{
+    width: 32px;
+    height: 32px;
+    float: right;
+}
+
+.account > .account_summary > .limit > .limit_graphic > .limit_bar_use{
+    /*수치 조절에 사용할 값*/
+    width: 40%;
+}
+
+.account > .account_summary > .limit > .limit_graphic > .limit_bar_indicator{
+    /*위치 조절에 사용할 값*/
+    margin-left: 40%;
+}
+
+/*account: loan - 홍보 문구*/
+.loan{
+    width: 80vw;
+    margin: 10px auto;
+    padding: 10px 0;
+
+    text-align: center;
+}
+
+.loan > *{
+    font-weight: bold;
+    color:var(--black);
+    font-size: 20px;
+}
+
+/*account,loan 반응형*/
+@media only screen and (max-width: 500px) {
+
+    .account > .account_summary {
+        height: 21vh;
+    }
+
+    .account > .account_summary  > *{
+        font-size: 16px;
+    }
+
+    .account > .account_summary> .account_btn_group > .btn_account_transfer{
+        width: 32px;
+    }
+
+    .account > .account_summary> .amount_used > h2 >strong{
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .loan > *{
+        font-size: 16px;
+    }
+
+    .account > .account_summary > .limit> .graph{
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/*account : 계좌 내역*/
+.account_description{
+
+    background-color: white;
+
+    height: 70vh;
+    width: 100%;
+    margin: 0 auto;
+
+    border-radius: 15px 10px 0 0;
+
+    /*flex overflow scroll 처리*/
+    /*자식요소에 너비와 높이값을 주고 
+    'flex: 0 0 auto;'를 추가해준다*/
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+/*확대 부분*/
+.account_description > .more{
+    width: 95%;
+    height: 3vh;
+    background-color: white;
+
+    margin: 1vh 0;
+}
+
+.account_description > .more > img{
+    width: 150px;
+    height: 3vh;
+}
+
+/*저금통 스크롤 부분*/
+.account_description > .saving{
+
+    width: 95%;
+    margin: 0 auto;
+    height: 10vh;
+
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    justify-content: flex-start;
+
+    background-color: white;
+}
+
+
+.account_description > .saving > .saving_bar{
+
+    float: left;
+
+    font-size: 16px;
+    color: white;
+    background-color: #F5F5F5;
+
+    position: relative;
+
+    margin: 0 15px 0;
+    width: 200px;
+    height: 8vh;
+
+    flex: 0 0 auto;/*grow,shrink,basis*/
+}
+
+
+.account_description > .saving > .saving_bar > *{
+    position: absolute;
+    left:0;
+}
+
+.account_description > .saving > .saving_bar > .saving_info > *{
+    padding: 1vh;
+}
+
+.account_description > .saving > .saving_bar > .bar_grogress{
+    height: inherit;
+    float: left;
+}
+
+.account_description > .saving > .saving_bar >.orange{
+    background-color: #FF5F00;
+
+    /*지출량 변경시 사용*/
+    /*나중엔 id 부여해서 변경해야함*/
+    width: 50%;
+}
+
+.account_description > .saving > .saving_bar >.yellow{
+    background-color: #FEB700;
+
+    /*지출량 변경시 사용*/
+    width: 50%;
+}
+
+.account_description > .saving > .saving_add{
+
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.account_description > .saving > .saving_add > img{
+    position: absolute;
+    top: 0vh;
+
+    width: 4vh;
+}
+
+.account_description > .expense{
+
+    height: 95%;
+    width: 95%;
+
+    overflow-y:auto;
+    overflow-x: hidden;
+
+    padding: 1vh 3vw;
+
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.account_description > .expense > * {
+	width: 100%;
+    font-size: 20px;
+	padding: 1vh 0;
+}
+
+.account_description > .expense  .left {
+	float: left;
+}
+
+.account_description > .expense  .right {
+	float: right;
+}
+
+.account_description > .expense > .expense_list > .content {
+	clear: both;
+
+    height: 24px;
+    border-bottom: var(--contour) 1px solid;
+
+    margin: 5px 0;
+}
+
+.account_description > .expense .in > .price {
+	color: orange;
+}
+
+.account_description > .expense > .expense_info > .date{
+	font-weight: bold;
+}
+
+.account_description > .expense > .expense_info > .total{
+	color: gray;
+}
+
+
+/*계좌 내역 반응형*/
+@media only screen and (max-width: 500px) {
+
+    .account_description > .more{
+        height: 2vh;
+        bottom: 55vh;
+    }
+
+    .account_description > .more > img{
+        width: 100px;
+        height: 1vh;
+    }
+
+    .account_description > .saving{
+        height: 7vh;
+    }
+
+    .account_description > .saving > .saving_bar{
+        width: 150px;
+        height: 6vh;
+        margin: 0 10px 0;
+        font-size: 12px;
+    }
+
+    .account_description > .expense *{
+        font-size: 18px;
+    }
+}
+
+
+/* 지출관리*/
+.management{
+    /*vw, vh 사용*/
+    width: 95vw;
+    height: 90vh;
+    margin:  0 auto;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+
+    border: 1px red solid;
+
+}
+
+
+.btn_close {
+
+    width: 70px;
+    height: 35px;
+
+    position: absolute;
+    top:10px;
+    right: 10px;
+
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.management > *{
+    border: 1px yellow solid;
+    padding: 10px 20px;
+
+    flex-shrink: 0;/*각 요소가 박스내에서 크기가 유지되게해 스크롤을 생성*/
+}
+
+.management *{
+    font-weight: 500;
+}
+
+.management h2{
+    font-size: 18px;
+    color : #444444;
+}
+
+.management h2 > strong{
+    
+    font-size: 24px;
+    color : #FF5F00;
+    letter-spacing: -0.24px;
+
+    float: right;
+}
+
+.management > .management_title{
+    margin-top: 60px;
+
+    font-size: 24px;
+}
+
+.management > .limit > .limit_graphic > .limit_bar_use{
+    /*수치 조절에 사용할 값*/
+    width: 40%;
+}
+
+.management > .limit > .limit_graphic > .limit_bar_indicator{
+    /*위치 조절에 사용할 값*/
+    margin-left: 40%;
+}
+
+/*footer*/
+.menu-list{
+
+    background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+    /*vw, vh 사용*/
+    width: 100vw;
+    height: 10vh;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.menu-list > * > button, button>*{
+    height: 28px;
+    width: 28px;
+}
+
+/*swiper*/
+.swiper {
+    width: 100vw;
+    height: 100vh;
+}
+
+
