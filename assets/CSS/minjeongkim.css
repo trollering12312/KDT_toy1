@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* root */
+:root {
+    /* structure */
+    --home-bgc: #EEECE5;
+    --bar-bgc: #C4C4C4;
+    --saving-bgc: #DADADA;
+    --account-desc-bgc: #F5F5F5;
+    --contour: #DCDCDC;
+    /*point color*/
+    --red: #FF5F00;
+    --orange: #FEB700;
+    --yellow-dark: #EEBA00;
+    --yellow-light: #FFDB4C;
+    --green: #005F59;
+    --blue-light: #55ACEE;
+    --blue: #4C89FF;
+    --navy: #0A73C4;
+    --purple: #C64CFF;
+    /* font color*/
+    --black: #000000;
+    --primary: #444444;
+    --secondary: #858585;
+    --teriary: #B4B4B4;
+    --white: #FFFFFF;
+    /*bottom menu box*/
+    --menu-gradient: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+    --menu-active-icon-color: #005F59;
+    --menu-deactive-icon-color: #EEEBE5;
+  }
+/* layout */
+.home{
+    width:100%;  
+   background: var(--home-bgc);
+   
+}
+.home .misc{
+    box-sizing: border-box;
+    padding:50px 21px 41px 27px;
+    border:1px solid red;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+/* home */
+
+/* header */
+.misc .misc_profile >img{
+    width:43px;
+}
+.misc >h1{
+    font-size:18px;
+    font-weight:500;
+}
+
+.misc >.misc_btn_group{
+font-size: 0;
+}
+.misc >.misc_btn_group >button >img{
+    width:24px;
+}
+.misc >.misc_btn_group >button >img:last-child{
+    height:24px;
+    margin-left:18px;
+}
+/* main */
+/* account */
+.account{
+ 
+}
+.account .account_summary{
+    box-sizing: border-box;
+    width:279px;
+    height:155px;
+    border-radius: 12px;
+    margin:0 auto;
+    background:var(--white);
+    padding:17px 0 6px 0;
+}
+.account > .account_summary> .account_btn_group{
+    font-size:14px;
+    line-height:1.5;
+    letter-spacing: -0.24px;
+}
+.account .account_summary .account_btn_group >.btn_account_number{
+   
+    margin-left:73px;
+    font-weight:500;
+    color:var(--secondary);
+    font-size:inherit;
+    line-height:inherit;
+    width:135px;
+   letter-spacing: inherit;
+}
+.account .account_summary .account_btn_group >.btn_account_transfer{
+    margin-left:27px;
+    font-size:inherit;
+    line-height:inherit;
+    letter-spacing: inherit;
+}
+.account .account_summary >h2{
+    
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+/*  */
+
+
+/* 420이하 */
+@media screen and (max-width:420px) {
+    body{
+        
+        }
+    
+}
